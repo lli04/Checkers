@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38129CB220852C9D006940DA /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38129CB120852C9D006940DA /* Board.swift */; };
+		38129CB420852D47006940DA /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38129CB320852D47006940DA /* Tile.swift */; };
 		3B72D8E120852AB9003B1CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B72D8E020852AB9003B1CAB /* AppDelegate.swift */; };
 		3B72D8E320852AB9003B1CAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B72D8E220852AB9003B1CAB /* ViewController.swift */; };
 		3B72D8E620852ABA003B1CAB /* Checkers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B72D8E420852AB9003B1CAB /* Checkers.xcdatamodeld */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38129CB120852C9D006940DA /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		38129CB320852D47006940DA /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		3B72D8DD20852AB9003B1CAB /* Checkers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checkers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B72D8E020852AB9003B1CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B72D8E220852AB9003B1CAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 			children = (
 				3B72D8E020852AB9003B1CAB /* AppDelegate.swift */,
 				3B72D8E220852AB9003B1CAB /* ViewController.swift */,
+				38129CB120852C9D006940DA /* Board.swift */,
+				38129CB320852D47006940DA /* Tile.swift */,
 				3B72D8E720852ABA003B1CAB /* Main.storyboard */,
 				3B72D8EA20852ABA003B1CAB /* Assets.xcassets */,
 				3B72D8EC20852ABA003B1CAB /* Info.plist */,
@@ -137,6 +143,8 @@
 			files = (
 				3B72D8E320852AB9003B1CAB /* ViewController.swift in Sources */,
 				3B72D8E620852ABA003B1CAB /* Checkers.xcdatamodeld in Sources */,
+				38129CB420852D47006940DA /* Tile.swift in Sources */,
+				38129CB220852C9D006940DA /* Board.swift in Sources */,
 				3B72D8E120852AB9003B1CAB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +274,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CFRA4PU3F2;
+				DEVELOPMENT_TEAM = 84LWTY6T5F;
 				INFOPLIST_FILE = Checkers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lli04.Checkers;
@@ -282,7 +290,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CFRA4PU3F2;
+				DEVELOPMENT_TEAM = 84LWTY6T5F;
 				INFOPLIST_FILE = Checkers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lli04.Checkers;

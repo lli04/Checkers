@@ -10,9 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var board: Board = Board(rows: 8, columns: 8)
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        board = Board(rows: 8, columns: 8)
+        createGameBoard()
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +23,19 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func createGameBoard() {
+        self.view.addSubview(board.backgroundView)
+        
+        // add target to each tile
+        for tile in board.tiles {
+            tile.addTarget(self, action: #selector(tileTapped), for: .primaryActionTriggered)
+        }
+        
+    }
+    
+    @objc func tileTapped(sender: UIButton) {
+        print("tile tapped")
+    }
 
 }
 
