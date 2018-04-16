@@ -23,12 +23,19 @@ class Tile : UIButton
         
         self.setTitleColor(.black, for: .normal)
         
-        if name % 2 == 0 {
+//        if position.row % 2 == 0 {
+//            self.backgroundColor = UIColor.darkGray
+//        }
+//        else {
+//            self.backgroundColor = UIColor.white
+//        }
+        if position.column % 2 == 0 && position.row % 2 != 0 {
             self.backgroundColor = UIColor.darkGray
-        } else {
-            self.backgroundColor = UIColor.white
         }
-
+        
+        if position.row % 2 == 0 && position.column % 2 != 0 {
+            self.backgroundColor = UIColor.darkGray
+        } 
 //        self.backgroundColor = UIColor.blueJeansLight
         self.layer.cornerRadius = 10.0
         self.layer.borderColor = UIColor.darkGray.cgColor
@@ -51,7 +58,7 @@ class Tile : UIButton
         fatalError("init(coder:) has not been implemented")
     }
 }
-struct TilePosition : Equatable
+struct TilePosition
 {
     var row: Int, column: Int
 }
