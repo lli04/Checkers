@@ -37,8 +37,16 @@ class Board {
             let pos = TilePosition(row: row, column: column)
             let rect = CGRect(x:CGFloat(column - 1) * (blockWidth + 2.0) , y: CGFloat(row - 1) * (blockWidth + 2.0), width: blockWidth, height: blockWidth)
             let tile = Tile(position: pos, name: i + 1, frame: rect)
+            
+            let pieceRect = CGRect(x:CGFloat(column - 1) * (blockWidth + 2.0) , y: CGFloat(row - 1) * (blockWidth + 2.0), width: blockWidth - 15.0, height: blockWidth - 15.0)
+            let piece = UIView(frame: pieceRect)
+            piece.backgroundColor = UIColor.blue
+            piece.layer.cornerRadius = (blockWidth-15)/2
+            piece.center = tile.center
+
             tiles.append(tile)
             backgroundView.addSubview(tile)
+            backgroundView.addSubview(piece)
         }
         
     }
