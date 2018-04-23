@@ -50,7 +50,7 @@ class Tile : UIButton
             self.setTitle("", for: .normal)
         } else {
             // this is every other tile
-            self.setTitle("\(name)", for: .normal)
+            self.setTitle("", for: .normal)
         }
     }
     
