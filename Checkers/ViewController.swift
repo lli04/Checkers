@@ -23,6 +23,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+        <#code#>
+    }
+    
     func createGameBoard() {
         self.view.addSubview(board.backgroundView)
         
