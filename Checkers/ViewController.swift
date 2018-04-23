@@ -24,7 +24,13 @@ class ViewController: UIViewController {
     }
 
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
-        <#code#>
+        super.didUpdateFocus(in: context, with: coordinator)
+        let tile = context.nextFocusedView
+        tile?.layer.shadowOffset = CGSize(width: 0, height: 10)
+        tile?.layer.shadowOpacity = 0.6
+        tile?.layer.shadowRadius = 15
+        tile?.layer.shadowColor = UIColor.black.cgColor
+        context.previouslyFocusedView?.layer.shadowOpacity = 0
     }
     
     func createGameBoard() {
