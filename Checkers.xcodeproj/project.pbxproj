@@ -14,6 +14,7 @@
 		3B72D8E620852ABA003B1CAB /* Checkers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B72D8E420852AB9003B1CAB /* Checkers.xcdatamodeld */; };
 		3B72D8E920852ABA003B1CAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B72D8E720852ABA003B1CAB /* Main.storyboard */; };
 		3B72D8EB20852ABA003B1CAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B72D8EA20852ABA003B1CAB /* Assets.xcassets */; };
+		3BC292FA208E617900C81926 /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC292F9208E617900C81926 /* Piece.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3B72D8E820852ABA003B1CAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B72D8EA20852ABA003B1CAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B72D8EC20852ABA003B1CAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BC292F9208E617900C81926 /* Piece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				3B72D8E220852AB9003B1CAB /* ViewController.swift */,
 				38129CB120852C9D006940DA /* Board.swift */,
 				38129CB320852D47006940DA /* Tile.swift */,
+				3BC292F9208E617900C81926 /* Piece.swift */,
 				3B72D8E720852ABA003B1CAB /* Main.storyboard */,
 				3B72D8EA20852ABA003B1CAB /* Assets.xcassets */,
 				3B72D8EC20852ABA003B1CAB /* Info.plist */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B72D8E320852AB9003B1CAB /* ViewController.swift in Sources */,
+				3BC292FA208E617900C81926 /* Piece.swift in Sources */,
 				3B72D8E620852ABA003B1CAB /* Checkers.xcdatamodeld in Sources */,
 				38129CB420852D47006940DA /* Tile.swift in Sources */,
 				38129CB220852C9D006940DA /* Board.swift in Sources */,
