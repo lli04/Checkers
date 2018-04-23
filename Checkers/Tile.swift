@@ -24,19 +24,19 @@ class Tile : UIButton
         self.setTitleColor(.black, for: .normal)
         
         if position.column % 2 == 0 && position.row % 2 != 0 {
-            self.backgroundColor = UIColor.brown
+            self.backgroundColor = UIColor.white
         }
         
         if position.column % 2 == 0 && position.row % 2 == 0 {
-            self.backgroundColor = UIColor.white
-        }
-        
-        if position.row % 2 == 0 && position.column % 2 != 0 {
             self.backgroundColor = UIColor.brown
         }
         
-        if position.row % 2 != 0 && position.column % 2 != 0 {
+        if position.row % 2 == 0 && position.column % 2 != 0 {
             self.backgroundColor = UIColor.white
+        }
+        
+        if position.row % 2 != 0 && position.column % 2 != 0 {
+            self.backgroundColor = UIColor.brown
         }
         
 //        self.backgroundColor = UIColor.blueJeansLight

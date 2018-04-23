@@ -46,7 +46,11 @@ class Board {
 
             tiles.append(tile)
             backgroundView.addSubview(tile)
-            backgroundView.addSubview(piece)
+            if tile.backgroundColor == UIColor.brown && row != 4 && row != 5 {
+            
+                backgroundView.addSubview(piece)
+                
+            }
         }
         
     }
