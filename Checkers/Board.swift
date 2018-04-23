@@ -40,7 +40,13 @@ class Board {
             
             let pieceRect = CGRect(x:CGFloat(column - 1) * (blockWidth + 2.0) , y: CGFloat(row - 1) * (blockWidth + 2.0), width: blockWidth - 15.0, height: blockWidth - 15.0)
             let piece = UIView(frame: pieceRect)
-            piece.backgroundColor = UIColor.blue
+            if row == 1 || row == 2 || row == 3 {
+                piece.backgroundColor = UIColor.black
+            }
+            else {
+                piece.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+            }
+            
             piece.layer.cornerRadius = (blockWidth-15)/2
             piece.center = tile.center
 
