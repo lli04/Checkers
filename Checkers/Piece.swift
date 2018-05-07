@@ -10,6 +10,21 @@ import Foundation
 import UIKit
 
 class Piece : UIView {
-    var piece: Piece?
+    var color: UIColor {
+        didSet {
+            self.backgroundColor = color
+        }
+    }
+    
+    init(frame: CGRect, color: UIColor) {
+        self.color = color
+        super.init(frame: frame)
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 }
 

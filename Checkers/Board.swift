@@ -12,10 +12,9 @@ import UIKit
 class Board {
     
     var rows: Int, columns: Int
-
-    
     var tiles = [Tile]()
     var backgroundView: UIView
+
     
     init(rows: Int, columns: Int)
     {
@@ -38,29 +37,37 @@ class Board {
             let rect = CGRect(x:CGFloat(column - 1) * (blockWidth + 2.0) , y: CGFloat(row - 1) * (blockWidth + 2.0), width: blockWidth, height: blockWidth)
             let tile = Tile(position: pos, name: i + 1, frame: rect)
             
-            let pieceRect = CGRect(x:CGFloat(column - 1) * (blockWidth + 2.0) , y: CGFloat(row - 1) * (blockWidth + 2.0), width: blockWidth - 15.0, height: blockWidth - 15.0)
-            let piece = UIView(frame: pieceRect)
-            if row == 1 || row == 2 || row == 3 {
-                piece.backgroundColor = UIColor.black
-            }
-            else {
-                piece.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
-            }
+            // fix how we are adding a piece... logic can be goofy
             
-            piece.layer.cornerRadius = (blockWidth-15)/2
-            piece.center = tile.center
 
             tiles.append(tile)
             backgroundView.addSubview(tile)
             if tile.backgroundColor == UIColor.brown && row != 4 && row != 5 {
-            
-                backgroundView.addSubview(piece)
+                let pieceRect = CGRect(x:CGFloat(column - 1) * (blockWidth + 2.0) , y: CGFloat(row - 1) * (blockWidth + 2.0), width: blockWidth - 15.0, height: blockWidth - 15.0)
+                let piece = Piece(frame: pieceRect, color: UIColor.clear)
                 
+//                let piece = UIView(frame: pieceRect)
+                if row == 1 || row == 2 || row == 3 {
+                    piece.color = .black
+                }
+                else {
+                    piece.color = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+                }
+//                piece.backgroundColor = piece.color
+                piece.layer.cornerRadius = (blockWidth-15)/2
+                piece.center = tile.center
+                
+                tile.containsPiece = true
+                backgroundView.addSubview(piece)
             }
         }
         
     }
     
+    func isValidTile(tile: Tile) -> Bool {
+        
+        return tile.containsPiece
+    }
 //    func shuffle(numberOfMoves: Int) {
 //        for _ in 0..<numberOfMoves {
 //            // find all possible moves.  up to 4.

@@ -45,6 +45,20 @@ class ViewController: UIViewController {
     
     @objc func tileTapped(sender: UIButton) {
         print("tile tapped")
+        let tile = sender as! Tile
+        // check if it is a valid piece
+        if board.isValidTile(tile: tile) {
+            // highlight available moves
+            
+            
+            // tap available tile and move
+            
+            
+            // check if move has multiple moves
+        }
+        
+        
+        
     }
 
 }

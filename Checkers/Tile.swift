@@ -13,11 +13,15 @@ class Tile : UIButton
     // this will carry the row and column
     var position: TilePosition
     var name: Int
+    var containsPiece: Bool
+    var piece: Piece?
 //    var bordersEmptyTile: Bool
     
     init(position: TilePosition, name: Int, frame: CGRect) {
         self.position = position
         self.name = name
+        self.containsPiece = false
+        self.piece = nil
 
         super.init(frame: frame)
         
@@ -44,6 +48,8 @@ class Tile : UIButton
         self.layer.borderColor = UIColor.darkGray.cgColor
         self.layer.borderWidth = 2.0
         self.setTileTitle()
+        
+        
         
     }
     
