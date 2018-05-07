@@ -68,6 +68,24 @@ class Board {
         
         return tile.containsPiece
     }
+    
+    func highlightMoves(tile: Tile) {
+        
+        for possibleTile in tiles {
+            
+            // shadowOpacity
+            // shadowRadius
+            //shadowColor
+          
+            if possibleTile.position.row == tile.position.row + 1 && possibleTile.position.column == tile.position.column + 1 || possibleTile.position.row == tile.position.row + 1 {
+            tile.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+            tile.layer.borderWidth = 5
+                
+            }
+            
+        }
+        
+    }
 //    func shuffle(numberOfMoves: Int) {
 //        for _ in 0..<numberOfMoves {
 //            // find all possible moves.  up to 4.
