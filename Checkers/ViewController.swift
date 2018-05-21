@@ -49,11 +49,17 @@ class ViewController: UIViewController {
         // check if it is a valid piece
         if board.isValidTile(tile: tile) {
             // highlight available moves
-            
+            if tile.containsPiece == true {
             board.highlightMoves(tile: tile)
+            }
             
             // tap available tile and move
             
+            if board.possibleMoves.contains(tile) {
+                
+                
+                
+            }
             
             // check if move has multiple moves
         }

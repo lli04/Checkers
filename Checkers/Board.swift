@@ -14,12 +14,17 @@ class Board {
     var rows: Int, columns: Int
     var tiles = [Tile]()
     var backgroundView: UIView
+    var possibleMoves = [Tile]()
+    var selectedTile: Tile?
 
     
     init(rows: Int, columns: Int)
     {
         self.rows = rows
         self.columns = columns
+        
+        selectedTile = nil
+        possibleMoves = []
         
         let width = UIScreen.main.bounds.width
         let height = UIScreen.main.bounds.height
@@ -58,6 +63,7 @@ class Board {
                 piece.center = tile.center
                 
                 tile.containsPiece = true
+                tile.piece = piece
                 backgroundView.addSubview(piece)
             }
         }
@@ -71,6 +77,8 @@ class Board {
     
     func highlightMoves(tile: Tile) {
         
+        possibleMoves = []
+        
         for possibleTile in tiles {
             
             // shadowOpacity
@@ -79,27 +87,41 @@ class Board {
             
             possibleTile.layer.shadowOpacity = 0
           
-            if possibleTile.position.row == tile.position.row + 1 && possibleTile.position.column == tile.position.column + 1 {
-       
-                
-                
-            //possibleTile.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
-            //possibleTile.layer.borderWidth = 5
+            if possibleTile.position.row == tile.position.row + 1 && possibleTile.position.column == tile.position.column + 1 && tile.piece?.color == .black && possibleTile.containsPiece == false {
+      
                 
                 possibleTile.layer.shadowOpacity = 0.9
                 possibleTile.layer.shadowRadius = 20
                 possibleTile.layer.shadowColor = UIColor.blue.cgColor
                 
+                possibleMoves.append(possibleTile)
+                
             }
             
-            if possibleTile.position.row == tile.position.row + 1 && possibleTile.position.column == tile.position.column - 1 {
+            if possibleTile.position.row == tile.position.row + 1 && possibleTile.position.column == tile.position.column - 1 && tile.piece?.color == .black && possibleTile.containsPiece == false {
 
                 possibleTile.layer.shadowOpacity = 0.9
                 possibleTile.layer.shadowRadius = 20
                 possibleTile.layer.shadowColor = UIColor.blue.cgColor
+                possibleMoves.append(possibleTile)
                 
-                //possibleTile.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
-                //possibleTile.layer.borderWidth = 5
+            }
+            
+            if possibleTile.position.row == tile.position.row - 1 && possibleTile.position.column == tile.position.column + 1 && tile.piece?.color == #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1) && possibleTile.containsPiece == false {
+                
+                
+                possibleTile.layer.shadowOpacity = 0.9
+                possibleTile.layer.shadowRadius = 20
+                possibleTile.layer.shadowColor = UIColor.blue.cgColor
+                possibleMoves.append(possibleTile)
+            }
+            
+            if possibleTile.position.row == tile.position.row - 1 && possibleTile.position.column == tile.position.column - 1 && tile.piece?.color == #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1) && possibleTile.containsPiece == false {
+                
+                possibleTile.layer.shadowOpacity = 0.9
+                possibleTile.layer.shadowRadius = 20
+                possibleTile.layer.shadowColor = UIColor.blue.cgColor
+                possibleMoves.append(possibleTile)
                 
             }
             
