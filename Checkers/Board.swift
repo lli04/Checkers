@@ -76,10 +76,30 @@ class Board {
             // shadowOpacity
             // shadowRadius
             //shadowColor
+            
+            possibleTile.layer.shadowOpacity = 0
           
-            if possibleTile.position.row == tile.position.row + 1 && possibleTile.position.column == tile.position.column + 1 || possibleTile.position.row == tile.position.row + 1 {
-            tile.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
-            tile.layer.borderWidth = 5
+            if possibleTile.position.row == tile.position.row + 1 && possibleTile.position.column == tile.position.column + 1 {
+       
+                
+                
+            //possibleTile.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+            //possibleTile.layer.borderWidth = 5
+                
+                possibleTile.layer.shadowOpacity = 0.9
+                possibleTile.layer.shadowRadius = 20
+                possibleTile.layer.shadowColor = UIColor.blue.cgColor
+                
+            }
+            
+            if possibleTile.position.row == tile.position.row + 1 && possibleTile.position.column == tile.position.column - 1 {
+
+                possibleTile.layer.shadowOpacity = 0.9
+                possibleTile.layer.shadowRadius = 20
+                possibleTile.layer.shadowColor = UIColor.blue.cgColor
+                
+                //possibleTile.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+                //possibleTile.layer.borderWidth = 5
                 
             }
             
